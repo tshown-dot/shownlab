@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shown Lab — AI Research & Strategic Consulting</title>
+  <meta name="description" content="Shown Lab is an applied AI lab and consulting practice bridging cutting-edge machine learning research with scalable production systems." />
+  <meta property="og:title" content="Shown Lab — AI Research & Strategic Consulting" />
+  <meta property="og:description" content="Applied machine learning prototypes, academic research, and custom enterprise AI solutions." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://shownlab.com" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef8ff',
+              100: '#d9f0ff',
+              400: '#38bdf8',
+              500: '#0284c7',
+              600: '#0369a1',
+              glow: '#00d4ff',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Subtle background grid pattern */
+    .bg-grid-pattern {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    }
+    .glow-orb {
+      background: radial-gradient(circle, rgba(14, 165, 233, 0.18) 0%, rgba(15, 23, 42, 0) 70%);
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-sky-500 selection:text-white relative min-h-screen">
+
+  <!-- Background Gradients -->
+  <div class="fixed inset-0 bg-grid-pattern pointer-events-none z-0"></div>
+  <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[450px] glow-orb pointer-events-none z-0"></div>
+
+  <!-- Navigation Bar -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center space-x-3 group">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center font-bold text-white shadow-lg shadow-sky-500/20 group-hover:scale-105 transition-transform">
+          S
+        </div>
+        <span class="font-bold text-lg tracking-tight text-white group-hover:text-sky-400 transition-colors">
+          Shown<span class="text-sky-400">Lab</span>
+        </span>
+      </a>
+
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-400">
+        <a href="#about" class="hover:text-white transition-colors">About</a>
+        <a href="#projects" class="hover:text-white transition-colors">Projects & Demos</a>
+        <a href="#services" class="hover:text-white transition-colors">Consulting</a>
+        <a href="#research" class="hover:text-white transition-colors">Research Stack</a>
+      </nav>
+
+      <div class="flex items-center space-x-4">
+        <a href="#contact" class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-lg bg-sky-500 text-white hover:bg-sky-400 transition-all shadow-md shadow-sky-500/25">
+          Get in Touch
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative z-10 pt-20 pb-24 md:pt-32 md:pb-36 px-6">
+    <div class="max-w-5xl mx-auto text-center">
+      
+      <!-- Status Badge -->
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-sky-500/30 bg-sky-500/10 text-sky-300 text-xs font-medium mb-8 backdrop-blur-sm">
+        <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
+        Applied AI Lab &amp; Strategic Advisory
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white leading-[1.1] mb-6">
+        Bridging Applied AI Research with <br class="hidden sm:inline" />
+        <span class="bg-gradient-to-r from-sky-400 via-teal-300 to-indigo-400 bg-clip-text text-transparent">
+          Production Systems
+        </span>
+      </h1>
+
+      <p class="max-w-2xl mx-auto text-lg sm:text-xl text-slate-300 leading-relaxed mb-10">
+        The home of <strong>Shown Lab</strong> — hosting experimental machine learning prototypes, academic research projects, and specialized AI systems consulting.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#projects" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-sky-500 hover:bg-sky-400 text-white font-semibold transition-all shadow-lg shadow-sky-500/25">
+          <i data-lucide="sparkles" class="w-4 h-4"></i>
+          Explore Live Projects
+        </a>
+        <a href="#services" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl border border-slate-700 hover:border-slate-600 bg-slate-900/60 hover:bg-slate-800 text-slate-200 font-semibold transition-all">
+          <i data-lucide="layers" class="w-4 h-4"></i>
+          Consulting Services
+        </a>
+      </div>
+
+      <!-- Stats / Highlights -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-20 pt-10 border-t border-slate-800/80 text-left">
+        <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800/50">
+          <div class="text-2xl font-bold text-sky-400 mb-1">01</div>
+          <div class="text-sm font-semibold text-white">LLM Architectures</div>
+          <div class="text-xs text-slate-400 mt-1">RAG, vector retrieval &amp; domain routing</div>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800/50">
+          <div class="text-2xl font-bold text-teal-400 mb-1">02</div>
+          <div class="text-sm font-semibold text-white">Agentic Workflows</div>
+          <div class="text-xs text-slate-400 mt-1">Tool-use, autonomy &amp; multi-agent graphs</div>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800/50">
+          <div class="text-2xl font-bold text-indigo-400 mb-1">03</div>
+          <div class="text-sm font-semibold text-white">Applied Prototyping</div>
+          <div class="text-xs text-slate-400 mt-1">Rapid proof-of-concept to microservices</div>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800/50">
+          <div class="text-2xl font-bold text-purple-400 mb-1">04</div>
+          <div class="text-sm font-semibold text-white">Academic Research</div>
+          <div class="text-xs text-slate-400 mt-1">Empirical evaluation, benchmarks &amp; papers</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Projects & Demos Section -->
+  <section id="projects" class="relative z-10 py-20 bg-slate-900/40 border-y border-slate-800/60">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-wider text-sky-400">Deployed Demos &amp; Microservices</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">Projects &amp; Subdomain Hub</h2>
+        </div>
+        <p class="text-sm text-slate-400 max-w-md mt-3 md:mt-0">
+          Each project runs in an isolated containerized environment on its own dedicated subdomain.
+        </p>
+      </div>
+
+      <!-- Project Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Project 1 Card (Placeholder ready for first service) -->
+        <div class="group relative rounded-2xl border border-slate-800 bg-slate-950/70 p-6 hover:border-sky-500/50 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-sky-500/10 text-sky-300 border border-sky-500/20">
+                agent.shownlab.com
+              </span>
+              <span class="inline-flex items-center gap-1.5 text-xs text-amber-400">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+                In Lab / Deploying
+              </span>
+            </div>
+            <h3 class="text-xl font-bold text-white group-hover:text-sky-300 transition-colors mb-2">
+              Autonomous Agent Orchestrator
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed mb-6">
+              A multi-agent workflow framework designed for asynchronous task execution, tool chaining, and automated evaluation.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-800/60 flex items-center justify-between text-xs text-slate-400">
+            <span class="font-mono">Python • FastAPI • LangChain</span>
+            <a href="https://agent.shownlab.com" target="_blank" class="inline-flex items-center gap-1 text-sky-400 hover:text-sky-300 font-medium">
+              Launch App <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2 Card -->
+        <div class="group relative rounded-2xl border border-slate-800 bg-slate-950/70 p-6 hover:border-teal-500/50 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-teal-500/10 text-teal-300 border border-teal-500/20">
+                rag.shownlab.com
+              </span>
+              <span class="inline-flex items-center gap-1.5 text-xs text-emerald-400">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                Staging
+              </span>
+            </div>
+            <h3 class="text-xl font-bold text-white group-hover:text-teal-300 transition-colors mb-2">
+              Context-Aware RAG Engine
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed mb-6">
+              Hybrid dense/sparse semantic retrieval pipeline with cross-encoder re-ranking for complex technical documents.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-800/60 flex items-center justify-between text-xs text-slate-400">
+            <span class="font-mono">FastAPI • Qdrant • PyTorch</span>
+            <a href="https://rag.shownlab.com" target="_blank" class="inline-flex items-center gap-1 text-teal-400 hover:text-teal-300 font-medium">
+              Launch App <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3 Card -->
+        <div class="group relative rounded-2xl border border-slate-800 bg-slate-950/70 p-6 hover:border-indigo-500/50 transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-2.5 py-1 rounded-md text-xs font-mono bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">
+                eval.shownlab.com
+              </span>
+              <span class="inline-flex items-center gap-1.5 text-xs text-slate-400">
+                <span class="w-1.5 h-1.5 rounded-full bg-slate-500"></span>
+                Research Preview
+              </span>
+            </div>
+            <h3 class="text-xl font-bold text-white group-hover:text-indigo-300 transition-colors mb-2">
+              Model Benchmark &amp; Telemetry
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed mb-6">
+              Empirical evaluation suite benchmarking LLM hallucination rates, token economics, and inference latency across providers.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-800/60 flex items-center justify-between text-xs text-slate-400">
+            <span class="font-mono">Streamlit • Docker • Python</span>
+            <a href="https://eval.shownlab.com" target="_blank" class="inline-flex items-center gap-1 text-indigo-400 hover:text-indigo-300 font-medium">
+              Launch App <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Consulting Services Section -->
+  <section id="services" class="relative z-10 py-20 px-6">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-mono uppercase tracking-wider text-sky-400">Client Engagements</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">AI Consulting Capabilities</h2>
+        <p class="text-slate-400 mt-3">
+          Helping startups, research groups, and established teams design, validate, and ship production-grade AI systems.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <div class="p-8 rounded-2xl border border-slate-800 bg-slate-900/30 hover:border-slate-700 transition-colors">
+          <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/20 text-sky-400 flex items-center justify-center mb-6">
+            <i data-lucide="bot" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Custom AI Agent Systems</h3>
+          <p class="text-slate-400 leading-relaxed text-sm mb-4">
+            End-to-end design and deployment of autonomous reasoning workflows, dynamic tool integration, structured output validation, and state machine persistence.
+          </p>
+          <ul class="text-xs text-slate-300 space-y-2 font-mono">
+            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-sky-400"></i> LangGraph / CrewAI workflow design</li>
+            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-sky-400"></i> Tool calling &amp; schema-enforced validation</li>
+          </ul>
+        </div>
+
+        <div class="p-8 rounded-2xl border border-slate-800 bg-slate-900/30 hover:border-slate-700 transition-colors">
+          <div class="w-12 h-12 rounded-xl bg-teal-500/10 border border-teal-500/20 text-teal-400 flex items-center justify-center mb-6">
+            <i data-lucide="database" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Enterprise RAG &amp; Knowledge Engines</h3>
+          <p class="text-slate-400 leading-relaxed text-sm mb-4">
+            Transform proprietary knowledge repositories into high-accuracy conversational intelligence. We solve hallucination, chunk boundary errors, and sparse context degradation.
+          </p>
+          <ul class="text-xs text-slate-300 space-y-2 font-mono">
+            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-teal-400"></i> Hybrid semantic &amp; BM25 search</li>
+            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-teal-400"></i> Vector DB indexing &amp; re-ranking pipelines</li>
+          </ul>
+        </div>
+
+        <div class="p-8 rounded-2xl border border-slate-800 bg-slate-900/30 hover:border-slate-700 transition-colors">
+          <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center mb-6">
+            <i data-lucide="zap" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Rapid AI MVP Development</h3>
+          <p class="text-slate-400 leading-relaxed text-sm mb-4">
+            Take concepts from whitepaper or notebook to live, interactive web apps within days. Built cleanly to scale seamlessly on platforms like Render, AWS, or GCP.
+          </p>
+          <ul class="text-xs text-slate-300 space-y-2 font-mono">
+            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-400"></i> Microservice backend &amp; API development</li>
+            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-400"></i> Docker containerization &amp; CI/CD pipelines</li>
+          </ul>
+        </div>
+
+        <div class="p-8 rounded-2xl border border-slate-800 bg-slate-900/30 hover:border-slate-700 transition-colors">
+          <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center mb-6">
+            <i data-lucide="sliders" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Model Optimization &amp; Evals</h3>
+          <p class="text-slate-400 leading-relaxed text-sm mb-4">
+            Quantize, fine-tune, and benchmark open-source and proprietary models to cut latency, optimize GPU memory footprint, and slash per-token cost by up to 80%.
+          </p>
+          <ul class="text-xs text-slate-300 space-y-2 font-mono">
+            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-purple-400"></i> Automated evaluation harnesses &amp; unit tests</li>
+            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-purple-400"></i> Inference speed and token usage audit</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Research & Tech Stack Section -->
+  <section id="research" class="relative z-10 py-16 bg-slate-900/30 border-t border-slate-800/60 px-6">
+    <div class="max-w-7xl mx-auto text-center">
+      <span class="text-xs font-mono uppercase tracking-wider text-slate-400">Core Technologies</span>
+      <h3 class="text-2xl font-bold text-white mt-1 mb-8">Lab &amp; Engineering Stack</h3>
+
+      <div class="flex flex-wrap justify-center items-center gap-3 max-w-3xl mx-auto">
+        <span class="px-4 py-2 rounded-xl bg-slate-800/80 border border-slate-700/60 text-xs font-mono text-slate-300">Python 3.12</span>
+        <span class="px-4 py-2 rounded-xl bg-slate-800/80 border border-slate-700/60 text-xs font-mono text-slate-300">PyTorch</span>
+        <span class="px-4 py-2 rounded-xl bg-slate-800/80 border border-slate-700/60 text-xs font-mono text-slate-300">FastAPI</span>
+        <span class="px-4 py-2 rounded-xl bg-slate-800/80 border border-slate-700/60 text-xs font-mono text-slate-300">LangChain &amp; LangGraph</span>
+        <span class="px-4 py-2 rounded-xl bg-slate-800/80 border border-slate-700/60 text-xs font-mono text-slate-300">LlamaIndex</span>
+        <span class="px-4 py-2 rounded-xl bg-slate-800/80 border border-slate-700/60 text-xs font-mono text-slate-300">Docker</span>
+        <span class="px-4 py-2 rounded-xl bg-slate-800/80 border border-slate-700/60 text-xs font-mono text-slate-300">Render Cloud</span>
+        <span class="px-4 py-2 rounded-xl bg-slate-800/80 border border-slate-700/60 text-xs font-mono text-slate-300">PostgreSQL / pgvector</span>
+        <span class="px-4 py-2 rounded-xl bg-slate-800/80 border border-slate-700/60 text-xs font-mono text-slate-300">Qdrant</span>
+        <span class="px-4 py-2 rounded-xl bg-slate-800/80 border border-slate-700/60 text-xs font-mono text-slate-300">TypeScript &amp; Tailwind</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Footer Section -->
+  <footer id="contact" class="relative z-10 pt-20 pb-12 border-t border-slate-800/80 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      
+      <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center font-bold text-2xl text-white mx-auto mb-6 shadow-xl shadow-sky-500/20">
+        S
+      </div>
+
+      <h2 class="text-3xl font-bold text-white mb-3">Let's Build Something Intelligent</h2>
+      <p class="text-slate-400 max-w-lg mx-auto text-sm leading-relaxed mb-8">
+        Available for AI consulting projects, academic collaborations, and technical advisory. Reach out to discuss your project.
+      </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-4 mb-16">
+        <a href="mailto:contact@shownlab.com" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-white font-semibold transition-all shadow-md shadow-sky-500/20">
+          <i data-lucide="mail" class="w-4 h-4"></i>
+          contact@shownlab.com
+        </a>
+        <a href="https://github.com/tshown-dot" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-slate-700 hover:border-slate-600 bg-slate-900/60 text-slate-200 font-semibold transition-all">
+          <i data-lucide="github" class="w-4 h-4"></i>
+          GitHub (@tshown-dot)
+        </a>
+      </div>
+
+      <div class="pt-8 border-t border-slate-800/60 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
+        <p>&copy; <span id="year">2026</span> Shown Lab (shownlab.com). All rights reserved.</p>
+        <p class="mt-2 sm:mt-0 font-mono">Hosted on Render • Rooted on Namecheap</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+    // Update copyright year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
